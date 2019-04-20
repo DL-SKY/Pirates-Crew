@@ -99,18 +99,18 @@ public static class ConstantsPrefabName
 public static class ConstantsScene
 {
     public const string MAIN_SCENE = "Main";
-    public const string MAIN_MENU = "MainMenu";
+    public const string MENU = "Menu";
 
     public const string GAME_SCENE = "Game";
 }
 
 public static class ConstantsScreen
 {
-    public const string MAIN_MENU = "MainMenuScreen";
+    public const string MENU = "MenuScreen";
 
-    public const string DEADSPACE = "DeadspaceScreen";
+    //public const string DEADSPACE = "DeadspaceScreen";
 
-    public const string GAME_SCREEN = "GameScreen";
+    //public const string GAME_SCREEN = "GameScreen";
 }
 
 public static class ConstantsDialog

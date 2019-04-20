@@ -105,40 +105,7 @@ public class MainGameManager : Singleton<MainGameManager>
         //TEST 1: Загрузка тестовой сцены
         yield return new WaitForSeconds(1.0f);
 
-
-
-        //yield return SceneManager.LoadSceneAsync(ConstantsScene.MAIN_MENU, LoadSceneMode.Additive);
-        //SceneManager.SetActiveScene(SceneManager.GetSceneByName(ConstantsScene.MAIN_MENU));
-
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        //LoadScene(ConstantsScene.MAIN_MENU);
-        ScreenManager.Instance.ShowScreen(ConstantsScreen.MAIN_MENU);
-
-        //while (!MainMenuSceneController.Instance.isInit)
-        //yield return null;
-
-        //yield return SplashScreenManager.Instance.HideSplashScreenImmediately();
-        //-------------------
-
-        //yield return SplashScreenManager.Instance.ShowBlack();
-
-
-        //TEST 2:
-        //ScreenManager.Instance.ShowScreen(ConstantsScreen.MAIN_MENU);
-        //-------------------
-
-        //Test3:
-        //int amount = 50000;
-        //Debug.Log(DllSky.Utility.UtilityBase.GetStringFormatAmount3(amount));
-        //Debug.Log(DllSky.Utility.UtilityBase.GetStringFormatAmount5(amount));
-        //Debug.Log(DllSky.Utility.UtilityBase.GetStringFormatAmount6(amount));
-        //-------------------
-
-        //TEST 3:
-        //yield return new WaitForSeconds(2.5f);
-        //LoadScene(ConstantsScene.CAREER);
-
-
+        ScreenManager.Instance.ShowScreen(ConstantsScreen.MENU); 
     }
 
     public IEnumerator LoadSceneCoroutine(string _scene, LoadSceneMode _mode = LoadSceneMode.Additive)

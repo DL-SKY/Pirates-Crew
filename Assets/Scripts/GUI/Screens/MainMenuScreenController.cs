@@ -28,13 +28,13 @@ public class MainMenuScreenController : ScreenController
 
     public void OnClickPlay()
     {
-        StartCoroutine(StartPlay());
+        //StartCoroutine(StartPlay());
     }
 
     public void OnClickTest()
     {
         //MainGameManager.Instance.LoadScene("Test");
-        StartCoroutine(StartTest());
+        //StartCoroutine(StartTest());
     }
     #endregion
 
@@ -53,7 +53,7 @@ public class MainMenuScreenController : ScreenController
     #region Coroutines
     private IEnumerator Initializing()
     {
-        yield return MainGameManager.Instance.LoadSceneCoroutine(ConstantsScene.MAIN_MENU);
+        yield return MainGameManager.Instance.LoadSceneCoroutine(ConstantsScene.MENU);
 
         StartCoroutine(Show());
     }
@@ -70,21 +70,13 @@ public class MainMenuScreenController : ScreenController
         yield return dialog.Wait();
     }
 
-    private IEnumerator StartPlay()
+    /*private IEnumerator StartPlay()
     {
         //Прелоадер
         yield return SplashScreenManager.Instance.ShowBlack();
         //yield return new WaitForSeconds(2.5f);
 
         ScreenManager.Instance.ShowScreen(ConstantsScreen.GAME_SCREEN, Global.Instance.PROFILE.currentShip);
-    }
-
-    private IEnumerator StartTest()
-    {
-        //Прелоадер
-        yield return SplashScreenManager.Instance.ShowBlack();
-
-        ScreenManager.Instance.ShowScreen(ConstantsScreen.DEADSPACE);
-    }
+    }*/
     #endregion
 }
