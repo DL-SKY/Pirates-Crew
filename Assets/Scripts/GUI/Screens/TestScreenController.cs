@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuScreenController : ScreenController
+public class TestScreenController : ScreenController
 {
     #region Variables
     #endregion
@@ -22,17 +22,12 @@ public class MenuScreenController : ScreenController
 
         StartCoroutine(Initializing());
     }
-
-    public void OnClickTest()
-    {
-        StartCoroutine(GoToTestScene());
-    }
     #endregion
 
     #region Private methods
     private IEnumerator Initializing()
     {
-        yield return MainGameManager.Instance.LoadSceneCoroutine(ConstantsScene.MENU);
+        yield return MainGameManager.Instance.LoadSceneCoroutine(ConstantsScene.TEST);
 
         StartCoroutine(Show());
     }
@@ -42,13 +37,6 @@ public class MenuScreenController : ScreenController
         //...
 
         yield return SplashScreenManager.Instance.HideSplashScreen();
-    }
-
-    private IEnumerator GoToTestScene()
-    {
-        yield return SplashScreenManager.Instance.ShowBlack();
-
-        ScreenManager.Instance.ShowScreen(ConstantsScreen.TEST);
     }
     #endregion
 }

@@ -101,12 +101,15 @@ public static class ConstantsScene
     public const string MAIN_SCENE = "Main";
     public const string MENU = "Menu";
 
-    public const string GAME_SCENE = "Game";
+    public const string TEST = "Test";
 }
 
 public static class ConstantsScreen
 {
     public const string MENU = "MenuScreen";
+
+
+    public const string TEST = "TestScreen";
 
     //public const string DEADSPACE = "DeadspaceScreen";
 
