@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DllSky.Utility;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,6 +22,17 @@ public class TestScreenController : ScreenController
         base.Initialize(_data);
 
         StartCoroutine(Initializing());
+    }
+
+    public void OnClickTest()
+    {
+        var human = Instantiate(ResourcesManager.LoadPrefab(ConstantsResourcesPath.PREFABS, ConstantsPrefabName.CREATURE_HUMAN), Vector3.zero, Quaternion.identity).GetComponent<HumanController>();
+
+        var data = new HumanData();
+        data.body = "human_01";
+
+        human.Initialize(data);
+        human.gameObject.AddComponent<CreatureInputPlayer>();
     }
     #endregion
 

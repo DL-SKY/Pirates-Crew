@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4653306195738782315}
   - component: {fileID: 9213347217897699655}
   - component: {fileID: 7846686165177890536}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MenuScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 5450840310400201117}
   - component: {fileID: 5942991870691152575}
   - component: {fileID: 1901440307657857898}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 3840729762522435949}
   - component: {fileID: 3626815994559488548}
   - component: {fileID: 3487698320572273852}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 5270677116386472311}
   - component: {fileID: 5728678017352780268}
   - component: {fileID: 8071635144239810395}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
