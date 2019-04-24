@@ -20,6 +20,7 @@ public class CreatureController : MonoBehaviour
     protected Vector2 waypoint;
 
     protected CreatureData data;
+    protected Rigidbody2D rb2d;
     #endregion
 
     #region Properties    
@@ -31,9 +32,19 @@ public class CreatureController : MonoBehaviour
     #endregion
 
     #region Unity methods
+    protected virtual void Awake()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+    }
+
     protected virtual void FixedUpdate()
     {
-        
+        if (Mathf.Abs(rb2d.position.x - waypoint.x) <= float.Epsilon)
+            return;
+
+        var step = data.GetParameter(EnumParameters.Speed) * Time.fixedDeltaTime;
+
+        rb2d.MovePosition(Vector2.MoveTowards(rb2d.position, new Vector2(waypoint.x, rb2d.position.y), step));
     }
 
     protected virtual void Update()

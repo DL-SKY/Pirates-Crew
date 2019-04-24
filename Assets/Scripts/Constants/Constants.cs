@@ -23,6 +23,9 @@ public static class ConstantsTag
     public const string TAG_SCREENS_CANVAS = "ScreensCanvas";
     public const string TAG_DIALOGS_CANVAS = "DialogsCanvas";
 
+    public const string TAG_FLOOR = "Floor";
+    public const string TAG_WATER = "Water";
+
     //public const string TAG_SPACESHIP = "Spaceship";
     //public const string TAG_MAIN_COLLIDER = "MainCollider";
     //public const string TAG_SHIELD_COLLIDER = "ShieldCollider";
@@ -170,13 +173,19 @@ public static class ConstantsEmail
 }
 
 #region ENUM
-public enum EnumSpeedType
+public enum EnumParameters
+{
+    Speed,
+}
+
+
+/*public enum EnumSpeedType
 {
     Stop,
     Dock,
     Cruising,
     Full,
-}
+}*/
 #endregion
 
 
