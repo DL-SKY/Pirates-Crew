@@ -32,8 +32,7 @@ public class CreatureInputPlayer : CreatureInputBase
         if (creature == null || _finger.StartedOverGui)
             return;
 
-        //TODO:
-        creature.movePoint = Camera.main.ScreenToWorldPoint(_finger.ScreenPosition);
+        SetWaypoint(Camera.main.ScreenToWorldPoint(_finger.ScreenPosition));
     }
     #endregion
 }

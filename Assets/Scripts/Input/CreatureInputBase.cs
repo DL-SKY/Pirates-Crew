@@ -19,6 +19,10 @@ public class CreatureInputBase : MonoBehaviour
     #endregion
 
     #region Protected methods
+    protected virtual void SetWaypoint(Vector2 _v2)
+    {
+        creature.Waypoint = _v2;
+    }
     #endregion
 
     #region Private methods

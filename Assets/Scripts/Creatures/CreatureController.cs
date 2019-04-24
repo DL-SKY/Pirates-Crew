@@ -16,12 +16,30 @@ public class CreatureController : MonoBehaviour
     protected string creaturePrefFolder;
 
     [Header("Actions")]
-    public Vector2 movePoint;
+    [SerializeField]
+    protected Vector2 waypoint;
 
     protected CreatureData data;
     #endregion
 
+    #region Properties    
+    public Vector2 Waypoint
+    {
+        get { return waypoint; }
+        set { waypoint = value; ApplyWaypoint(); }
+    }
+    #endregion
+
     #region Unity methods
+    protected virtual void FixedUpdate()
+    {
+        
+    }
+
+    protected virtual void Update()
+    {
+
+    }
     #endregion
 
     #region Public methods
@@ -30,6 +48,13 @@ public class CreatureController : MonoBehaviour
         data = _data;
 
         LoadBody();
+    }
+    #endregion
+
+    #region Properties methods
+    protected virtual void ApplyWaypoint()
+    {
+        //TODO
     }
     #endregion
 
