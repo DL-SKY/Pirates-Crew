@@ -173,6 +173,12 @@ public static class ConstantsEmail
 }
 
 #region ENUM
+public enum EnumDirection
+{
+    Left,
+    Right,
+}
+
 public enum EnumParameters
 {
     Speed,

@@ -30,6 +30,7 @@ public class TestScreenController : ScreenController
 
         var data = new HumanData();
         data.body = "human_01";
+        data.parametersList.Add(new ParameterData(EnumParameters.Speed, 1.5f));
 
         human.Initialize(data);
         human.gameObject.AddComponent<CreatureInputPlayer>();
