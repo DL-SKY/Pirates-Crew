@@ -28,6 +28,7 @@ public class TestScreenController : ScreenController
     {
         var human = Instantiate(ResourcesManager.LoadPrefab(ConstantsResourcesPath.PREFABS, ConstantsPrefabName.CREATURE_HUMAN), Vector3.zero, Quaternion.identity).GetComponent<HumanController>();
 
+        //Test data's
         var data = new HumanData();
         data.body = "human_01";
         data.parametersList.Add(new ParameterData(EnumParameters.Speed, 1.5f));

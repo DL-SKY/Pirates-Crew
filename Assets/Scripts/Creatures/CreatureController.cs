@@ -44,31 +44,24 @@ public class CreatureController : MonoBehaviour
     protected virtual void FixedUpdate()
     {
         if (Mathf.Abs(rb2d.position.x - waypoint.x) <= float.Epsilon)
-            return;
-
-        //Просчет перемещения
-        var step = data.GetParameter(EnumParameters.Speed) * Time.fixedDeltaTime;
-        var newPos = Vector2.MoveTowards(rb2d.position, new Vector2(waypoint.x, rb2d.position.y), step);
-
-        //Просчет направления
-        var dir = newPos.x < rb2d.position.x ? EnumDirection.Left : EnumDirection.Right;
-        ApplyDirection(dir);
+            return;        
 
         //Применение перемещения
-        rb2d.MovePosition(newPos);
+        ApplyMovePosition();        
     }
 
-    protected virtual void Update()
+    /*protected virtual void Update()
     {
 
-    }
+    }*/
     #endregion
 
     #region Public methods
     public virtual void Initialize(CreatureData _data)
     {
         data = _data;
-        data.UpdateParametersDictionary();
+        //data.UpdateParametersDictionary();
+        data.Initialize();
 
         LoadBody();
     }
@@ -115,6 +108,23 @@ public class CreatureController : MonoBehaviour
         }
 
         transform.localScale = new Vector3(scale, 1.0f, 1.0f);
+    }
+
+    protected virtual void ApplyMovePosition()
+    {
+        //Просчет перемещения
+        var step = data.GetParameter(EnumParameters.Speed) * Time.fixedDeltaTime;
+        var newPos = Vector2.MoveTowards(rb2d.position, new Vector2(waypoint.x, rb2d.position.y), step);
+
+        //Просчет направления
+        var dir = newPos.x < rb2d.position.x ? EnumDirection.Left : EnumDirection.Right;
+        ApplyDirection(dir);
+
+        //TODO:
+        //Проверка на возможность перемещения, на использование атаки и т.д.
+        //...
+
+        rb2d.MovePosition(newPos);
     }
     #endregion
 

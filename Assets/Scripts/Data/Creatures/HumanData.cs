@@ -5,6 +5,7 @@ using UnityEngine;
 public class HumanData : CreatureData
 {
     #region Varialbles
+    public string face;             //Название префаба туловища
     #endregion
 
     #region Public methods

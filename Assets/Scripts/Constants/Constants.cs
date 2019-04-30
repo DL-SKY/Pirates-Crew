@@ -184,6 +184,17 @@ public enum EnumParameters
     Speed,
 }
 
+public enum EnumItemTypes
+{
+    NA,
+    Helmet,
+    Clothes,
+    Accessory,
+    WeaponMelee,
+    WeaponRange,
+    Loot,
+}
+
 
 /*public enum EnumSpeedType
 {
